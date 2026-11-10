@@ -221,8 +221,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     window.__resourceBlobs = resourceBlobs;
 
     setStatus('Rendering...');
-    // Page uuids have no blob here — they ride inside about:blank#<uuid>
-    // frame markers the pass below resolves after the swap.
+.
     for (const uuid of uuids) {
       if (pageSet.has(uuid)) continue;
       template = template.split(uuid).join(blobUrls[uuid]);
